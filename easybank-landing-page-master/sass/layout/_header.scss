@@ -1,0 +1,45 @@
+.header {
+
+  &__top-section {
+      background-color: $color-White;
+      color: $color-Dark-Blue;
+      display: flex;
+
+
+
+      justify-content: space-around;
+      align-items: center;
+      height: 15vh;
+
+  }
+
+  &__logo {
+
+  }
+
+  &__nav {
+
+  }
+
+
+  &__nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2rem;
+
+
+
+  }
+
+  &__nav-link {
+      text-decoration: none;
+      font-size: $def-font-size;
+      color: inherit;
+  }
+}
