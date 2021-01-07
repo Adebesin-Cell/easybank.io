@@ -4,9 +4,9 @@
       background-color: $color-White;
       color: $color-Dark-Blue;
 
+      align-items: center;
 
 
-      
       display: flex;
 
 
@@ -44,6 +44,17 @@
   &__nav-link {
       text-decoration: none;
       font-size: $def-font-size;
-      color: inherit;
+      color: $color-grayish-Blue;
+  }
+
+  &__bottom-section {
+    height: 100vh;
+    display: flex;
+
+    &-image {
+      background-image: url(../images/bg-intro-desktop.svg);
+      background-position: right;
+      background-size: cover;
+    }
   }
 }
