@@ -19,5 +19,13 @@
 
   &__invite {
     background-image: linear-gradient(to right, $color-Lime-Green,$color-Bright-Cyan);
+
+
+    &--flex-end {
+    }
+  }
+
+  &:hover {
+    opacity: .5;
   }
 }

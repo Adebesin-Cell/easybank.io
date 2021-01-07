@@ -3,6 +3,9 @@
   &__top-section {
       background-color: $color-White;
       color: $color-Dark-Blue;
+      position: sticky;
+      top: 0;
+      left: 0;
 
       align-items: center;
 
@@ -45,16 +48,31 @@
       text-decoration: none;
       font-size: $def-font-size;
       color: $color-grayish-Blue;
+
+
   }
 
   &__bottom-section {
     height: 100vh;
     display: flex;
+    background-color: $color-Light-Grayish-Blue;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding-left: 10rem;
+      padding-right: 10rem;
+      flex: 0 0 50%;
+    }
 
     &-image {
       background-image: url(../images/bg-intro-desktop.svg);
       background-position: right;
       background-size: cover;
+      flex: 0 0 50%;
     }
   }
 }
