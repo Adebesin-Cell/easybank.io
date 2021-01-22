@@ -3,6 +3,13 @@
   &__top-section {
       background-color: $color-White;
       color: $color-Dark-Blue;
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      align-items: center;
+
+
       display: flex;
 
 
@@ -10,7 +17,7 @@
       justify-content: space-around;
       align-items: center;
       height: 15vh;
-
+      z-index: 100;
   }
 
   &__logo {
@@ -34,12 +41,102 @@
     padding: 0 2rem;
 
 
-
   }
 
   &__nav-link {
       text-decoration: none;
       font-size: $def-font-size;
-      color: inherit;
+      color: $color-grayish-Blue;
+      position: relative;
+
+      transition: all .3s;
+
+      &{
+        position: relative;
+
+
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4rem;
+        left: 0;
+        height: 3px;
+        width: 3px;
+        background-image: linear-gradient(to right ,  $color-Lime-Green, $color-Bright-Cyan);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform .2s,
+                    width .4s .2s cubic-bezier(1,0,0,1),
+                    background-color .1s;
+      }
+
+      &:hover::before,
+      &:hover::before {
+        transform: scaleX(1);
+        width: 100%;
+        transform-origin: center;
+      }
+
+
+
+
+      // span {
+      //   position: absolute;
+      //   bottom: -2rem;
+      //   left: 0;
+      //   height: 3px;
+      //   width: 100%;
+      //   background-image: linear-gradient(to right, $color-Lime-Green, $color-Bright-Cyan);
+      //
+      //   visibility: hidden;
+      //   opacity: 0;
+      //   transition: all .3s;
+      // }
+    //
+    // &:hover span {
+    //   opacity: 1;
+    //   visibility: visible;
+    //
+    //   }
+
+
+  }
+
+  &__bottom-section {
+    height: 100vh;
+    display: flex;
+    background-color: $color-Light-Grayish-Blue;
+    flex-basis: auto;
+    //overflow-x: hidden;
+    //overflow: scroll;
+
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: stretch;
+      justify-content: center;
+
+      align-self: stretch;
+
+      padding-left: 10rem;
+      padding-right: 10rem;
+      flex: 0 0 50%;
+    }
+
+    &-image {
+      background-image: url(../images/bg-intro-desktop.svg);
+      background-position: right;
+      background-size: cover;
+      flex: 0 0 50%;
+      padding: 5rem;
+      //overflow: hidden;
+    }
+  }
+
+  &__bottom-image {
+    object-fit: cover;
   }
 }

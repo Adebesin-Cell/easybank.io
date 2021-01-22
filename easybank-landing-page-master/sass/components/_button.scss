@@ -1,0 +1,31 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 1.5rem 3.5rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $def-font-size;
+        color: $color-White;
+ //change for the <button> element
+        border: none;
+        cursor:pointer;
+  }
+
+
+  &__invite {
+    background-image: linear-gradient(to right, $color-Lime-Green,$color-Bright-Cyan);
+
+
+    &--flex-end {
+    }
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+}

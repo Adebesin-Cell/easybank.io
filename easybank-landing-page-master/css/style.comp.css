@@ -16,14 +16,9 @@ body {
   color: white;
   background-color: #2bb7da; }
 
-.heading__primary {
+.heading__secondary {
   font-size: 5rem;
   font-weight: 400;
-  color: #2d314d; }
-
-.heading__secondary {
-  font-size: 4rem;
-  font-weight: 300;
   color: #2d314d; }
 
 .text {
@@ -45,13 +40,10 @@ body {
   margin-bottom: 8rem !important; }
 
 .u-margin-top-sm {
-  margin-top: 2rem !important; }
+  margin-bottom: 2rem !important; }
 
 .u-margin-top-md {
-  margin-top: 4rem !important; }
-
-.u-margin-top-hg {
-  margin-top: 8rem !important; }
+  margin-bottom: 4rem !important; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: capitalize;
@@ -101,36 +93,29 @@ body {
   color: #9698a6;
   position: relative;
   transition: all .3s; }
-  .header__nav-link {
-    position: relative; }
-  .header__nav-link::before {
-    content: "";
+  .header__nav-link span {
     position: absolute;
-    bottom: -4rem;
+    bottom: -2rem;
     left: 0;
     height: 3px;
-    width: 3px;
-    background-image: linear-gradient(to right, #31d35c, #2bb7da);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.2s, width 0.4s 0.2s cubic-bezier(1, 0, 0, 1), background-color 0.1s; }
-  .header__nav-link:hover::before, .header__nav-link:hover::before {
-    transform: scaleX(1);
     width: 100%;
-    transform-origin: center; }
+    background-image: linear-gradient(to right, #31d35c, #2bb7da);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s; }
+  .header__nav-link:hover span {
+    opacity: 1;
+    visibility: visible; }
 
 .header__bottom-section {
   height: 100vh;
   display: flex;
-  background-color: #f3f4f6;
-  flex-basis: auto; }
+  background-color: #f3f4f6; }
   .header__bottom-section-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: stretch;
     justify-content: center;
-    align-self: stretch;
     padding-left: 10rem;
     padding-right: 10rem;
     flex: 0 0 50%; }
@@ -138,14 +123,4 @@ body {
     background-image: url(../images/bg-intro-desktop.svg);
     background-position: right;
     background-size: cover;
-    flex: 0 0 50%;
-    padding: 5rem; }
-
-.header__bottom-image {
-  object-fit: cover; }
-
-.section-About {
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+    flex: 0 0 50%; }
